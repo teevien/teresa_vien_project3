@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Piano Fun</title>
+    <style>
+
+        /* html {
+            font-size:62.5%;
+        }
+        body {
+            background:rgba(0,0,0,0.8)
+        }
+        .wrapper {
+            margin:5% auto;
+            max-width:1080px; */
+            /* border:1px solid red; */
+            
+        /* }  */
+
+        /* h1 { */
+            /* border:1px solid red; */
+            /* text-align:center;
+            font-family:'Montserrat', sans-serif;
+            font-size: 4rem;
+            text-transform:uppercase;
+            color:rgba(255,2555,255,0.8);
+            margin:5% 0;
+        } */
+
+        /* .keyboard {
+            width:80%;
+            height:300px;
+            border:2px solid black;
+            margin:0 auto;
+            display:flex;
+            position:relative;
+            box-shadow:5px 5px 5px lightgrey;
+        }
+
+        .blackKey {
+            width:7%;
+            height: 60%;
+            background:black; */
+            /* border:1px solid red; */
+            /* z-index:1;
+            position:absolute;
+            left:10.5%;
+        }
+        
+            .blackKey:hover {
+                box-shadow: 5px 5px 5px grey;
+            }
+
+            .dsharp {
+                left:25%;
+            }
+
+            .fsharp {
+                left:53.5%;
+            }
+
+            .gsharp {
+                left:68%;
+            }
+
+            .asharp {
+                left:82%;
+            }
+        .key {
+            border:1px solid black;
+            width:20%;
+            /* height:100%; */
+            /* position:relative;
+            background:rgba(255,255,255,0.8);
+        }
+
+        .key:hover {
+            box-shadow:5px 5px lightgrey;
+        }
+            .key p {
+                text-align:center; */ 
+                /* border:1px solid red; */
+                /* position:absolute;
+                bottom:0;
+                left: 48%;
+                font-weight:bold;
+                font-family:'Montserrat', sans-serif;
+                font-size:2rem;
+            } */
+
+            
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <h1>Piano Keyboard</h1>
+
+        <div class="keyboard">
+            <div class="key" data-key="65">
+                <p>C</p>
+            </div>
+                <!-- C# KEY -->
+                <div class="blackKey" data-key="87">
+                   
+                </div>
+                <!--  -->
+            <div class="key" data-key="83">
+                <p>D</p>
+            </div>
+                <!-- D# KEY -->
+                <div class="blackKey dsharp" data-key="69">
+                
+                </div>
+                <!--  -->
+            <div class="key" data-key="68">
+                <p>E</p>
+            </div>
+
+            <div class="key" data-key="70">
+                <p>F</p>
+            </div>
+                <!-- F# KEY -->
+                <div class="blackKey fsharp" data-key="89">
+                
+                </div>
+                <!--  -->
+            <div class="key" data-key="72">
+                <p>G</p>
+            </div>
+                <!-- G# KEY -->
+                <div class="blackKey gsharp" data-key="85">
+                    
+                </div>
+                <!--  -->
+            <div class="key" data-key="74">
+                <p>A</p>
+            </div>
+                <!-- A# KEY -->
+                <div class="blackKey asharp" data-key="73">
+                    
+                </div>
+                <!--  -->
+            <div class="key" data-key="75">
+                <p>B</p>
+            </div>
+        </div>
+    </div>
+    
+    <audio data-key="65" src="audio/c-note.wav"></audio>
+    <audio data-key="87" src="audio/csharp.wav"></audio>
+    <audio data-key="83" src="audio/d-note.wav"></audio>
+    <audio data-key="69" src="audio/dsharp.wav"></audio>
+    <audio data-key="68" src="audio/e-note.wav"></audio>
+    <audio data-key="70" src="audio/f-note.wav"></audio>
+    <audio data-key="89" src="audio/fsharp.wav"></audio>
+    <audio data-key="72" src="audio/g-note.wav"></audio>
+    <audio data-key="85" src="audio/gsharp.wav"></audio>
+    <audio data-key="74" src="audio/a-note.wav"></audio>
+    <audio data-key="73" src="audio/asharp.wav"></audio>
+    <audio data-key="75" src="audio/b-note.wav"></audio>
+
+    <script>
+        
+
+
+       window.addEventListener('keydown', function (e) {
+        //    console.log(e);
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            // console.log(audio);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); 
+            // console.log(key);
+            if(!audio) return;
+            audio.currentTime = 0;
+            audio.play();
+        });
+
+
+        
+            // if (!audio) return;
+            // audio.currentTime = 0;
+            // audio.play();
+            // key.classList.add('active');
+            
+
+    </script>
+
+</body>
+</html>
