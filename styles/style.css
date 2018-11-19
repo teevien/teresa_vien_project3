@@ -23,6 +23,12 @@ html {
     font-family: "Montserrat", sans-serif;
     font-size: 1.6rem; }
 
+.footer {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold; }
+
 .keyborder {
   background: black;
   border-radius: 15px;
