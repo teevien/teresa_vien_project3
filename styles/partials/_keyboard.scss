@@ -1,63 +1,67 @@
+.keyborder {
+    // border:1px solid red;
+    background: $secondary;
+    border-radius:15px;
+    padding:6% 0;
+}
+
 .keyboard {
             width:80%;
             height:300px;
-            border:2px solid black;
+            border:2px solid $secondary;
             margin:0 auto;
             display:flex;
             position:relative;
-            box-shadow:5px 5px 5px lightgrey;
-              .blackKey {
+            box-shadow:5px 5px 5px lighten($primary, 10);
+            border-radius:10px;
+            border:3px solid ;
+        
+              .black-key {
             width:7%;
             height: 60%;
-            background:black;
-            /* border:1px solid red; */
+            background:$secondary;
+            border-radius:0 0 5px 5px ;
             z-index:1;
             position:absolute;
             left:10.5%;
         }
 
-         .dsharp {
+         .d-sharp {
                 left:25%;
             }
 
-            .fsharp {
+            .f-sharp {
                 left:53.5%;
             }
 
-            .gsharp {
+            .g-sharp {
                 left:68%;
             }
 
-            .asharp {
+            .a-sharp {
                 left:82%;
             }
 
             .key {
-            border:1px solid black;
+            border:1px solid $secondary;
             width:20%;
-            /* height:100%; */
             position:relative;
-            background:rgba(255,255,255,0.8);
+            background:$primary;
 
                 p {
                     text-align:center;
-                    /* border:1px solid red; */
                     position:absolute;
                     bottom:0;
                     left: 48%;
                     font-weight:bold;
-                    font-family:'Montserrat', sans-serif;
+                    font-family:$baseFont;
                     font-size:2rem;
                 }
              }   
           }
-      
-        .blackKey:hover {
-           box-shadow: 5px 5px 5px grey;
-        }
 
-
-        .key:hover {
+        .keyhover {
             box-shadow:5px 5px lightgrey;
         }
            
+// MEDIA QUERIES
