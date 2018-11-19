@@ -74,3 +74,11 @@ html {
 .keyhover {
   -webkit-box-shadow: 5px 5px lightgrey;
   box-shadow: 5px 5px lightgrey; }
+
+@media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+  .keyboard {
+    width: 90%; }
+    .keyboard .black-key {
+      width: 8%; }
+    .keyboard .key {
+      width: 25%; } }

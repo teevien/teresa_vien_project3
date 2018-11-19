@@ -84,22 +84,6 @@
     <audio data-key="73" src="audio/asharp.wav"></audio>
     <audio data-key="75" src="audio/b-note.wav"></audio>
 
-    <script>
-   window.addEventListener('keydown', event => {
-       const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-       const note= document.querySelector(`.note[data-key="${event.keyCode}"]`);
-
-        note.classList.add('keyhover');
-
-        setTimeout(function(){
-            note.classList.remove('keyhover');
-        }, 900);
-
-        audio.currentTime = 0;
-        audio.play();
-   });      
-
-    </script>
-
+   <script src="js/script.js"></script>
 </body>
 </html>

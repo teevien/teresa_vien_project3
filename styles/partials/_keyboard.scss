@@ -65,3 +65,16 @@
         }
            
 // MEDIA QUERIES
+@media (min-width:568px) and (max-width:767px) and (orientation:landscape) {
+    .keyboard {
+        width:90%;
+
+        .black-key {
+            width:8%;
+        }
+
+        .key {
+            width:25%;
+        }
+    }
+}
